@@ -1,9 +1,0 @@
-a:5:{i:0;s:267:"Error in file: "C:\xampp\htdocs\magento\app\code\local\Ccc\Attribute\sql\attribute_setup\upgrade-0.0.7-0.0.8.php" - SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3-1-146-0' for key 'UNQ_CAT_CTGR_ENTT_INT_ENTT_TYPE_ID_ENTT_ID_ATTR_ID_STORE_ID'";i:1;s:954:"#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(644): Mage::exception('Mage_Core', 'Error in file: ...')
-#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '0.0.7', '0.0.8')
-#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('0.0.7', '0.0.8')
-#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
-#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(428): Mage_Core_Model_Resource_Setup::applyAllUpdates()
-#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App->_initModules()
-#6 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
-#7 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
-#8 {main}";s:3:"url";s:85:"/magento/index.php/admin/catalog_category/index/key/70dec271eb4c3efad2d7d8df43f3958b/";s:11:"script_name";s:18:"/magento/index.php";s:4:"skin";s:7:"default";}

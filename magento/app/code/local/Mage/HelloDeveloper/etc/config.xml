@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <modules>
+        <Mage_HelloDeveloper>
+            <version>0.1.0</version>
+        </Mage_HelloDeveloper>
+    </modules>    
+    <frontend>
+        <routers>
+            <Mage_HelloDeveloper_SomeFreeRouterName1>
+                <use>standard</use>
+                <args>
+                    <module>Mage_HelloDeveloper</module>
+                    <frontName>mage-hellodeveloper</frontName>
+                </args>
+            </Mage_HelloDeveloper_SomeFreeRouterName1>
+        </routers>
+    </frontend>    
+</config>

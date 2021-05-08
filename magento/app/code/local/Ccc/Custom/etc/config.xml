@@ -1,0 +1,93 @@
+<config>
+    <modules>
+        <Ccc_Custom>
+            <version>1.0.7</version>
+         </Ccc_Custom>
+    </modules>
+
+    <global>
+         <models>
+            <custom>
+                <class>Ccc_Custom_Model</class>
+                <resourceModel>custom_resource</resourceModel>
+            </custom>
+
+            <custom_resource>
+	            <class>Ccc_Custom_Model_Resource</class>
+	            <entities>
+	                <custom>
+	                    <table>custom</table>
+	                </custom>
+	                <custom_datetime>
+	                	<table>custom_datetime</table>
+		            </custom_datetime>
+		            <custom_decimal>
+		                <table>custom_decimal</table>
+		            </custom_decimal>
+		            <custom_int>
+		                <table>custom_int</table>
+		            </custom_int>
+		            <custom_text>
+		                <table>custom_text</table>
+		            </custom_text>
+		            <custom_varchar>
+		                <table>custom_varchar</table>
+		            </custom_varchar>
+		            <custom_char>
+		                <table>custom_char</table>
+		            </custom_char>
+		            <eav_attribute>
+                        <table>custom_eav_attribute</table>
+                    </eav_attribute>
+		        </entities>
+		    </custom_resource>
+        </models>
+
+        <resources>
+            <custom_setup>
+                <setup>
+                    <module>Ccc_Custom</module>
+                    <class>Ccc_Custom_Model_Resource_Setup</class>
+                </setup>
+            </custom_setup>
+        </resources>
+
+        <helpers>
+            <custom>
+                <class>Ccc_Custom_Helper</class>
+            </custom>
+        </helpers>
+        
+        <blocks>
+            <custom>
+                <class>Ccc_Custom_Block</class>
+            </custom>
+            <custom_adminhtml>
+                <class>Ccc_Custom_Block_Adminhtml_Custom</class>
+            </custom_adminhtml>
+        </blocks>
+
+    </global>
+
+    <admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<ccc_custom>Ccc_Custom_Adminhtml</ccc_custom>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+    
+    <adminhtml>
+	    <layout>
+	      <updates>
+	        <custom>
+	          <file>custom.xml</file>
+            </custom>
+	      </updates>
+	    </layout>
+  	</adminhtml>
+</config>

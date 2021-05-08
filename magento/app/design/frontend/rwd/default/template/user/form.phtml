@@ -1,0 +1,27 @@
+<form method="POST" action="<?php echo $this->getUrl('*/*/Save');?>">
+<table>
+   <tr>
+        <td>First Name</td>
+        <td><input type="text" name="user[first_name]"></td>
+   </tr>
+   <tr>
+        <td> Last Name</td>
+        <td><input type="text" name="user[last_name]"></td>
+   </tr>
+   <tr>
+     <td>Email</td>
+     <td><input type="text" name="user[email]"></td>
+   </tr>
+   <tr>
+        <td>Mobile</td>
+        <td> <input type="text" name="user[mobile]"></td>
+   </tr>
+   <tr>
+        <td> Status </td>
+        <td><input type="text" name="user[status]"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="submit" value="Save"></td>
+    </tr>
+</table>
+</form>

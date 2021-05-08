@@ -1,0 +1,16 @@
+a:5:{i:0;s:899:"Error in file: "C:\xampp\htdocs\magento\app\code\local\Ccc\Vendor\sql\vendor_setup\upgrade-1.0.9-1.1.0.php" - SQLSTATE[HY000]: General error: 1005 Can't create table `magento`.`vendor_product_attribute_group` (errno: 150 "Foreign key constraint is incorrectly formed"), query was: CREATE TABLE `vendor_product_attribute_group` (
+  `group_id` int UNSIGNED NOT NULL auto_increment COMMENT 'Id' ,
+  `entity_id` int NOT NULL COMMENT 'Vendor Id' ,
+  `attribute_group_id` int NOT NULL COMMENT 'Attribute Group Id' ,
+  `attribute_group_name` text NOT NULL COMMENT 'Attribute Group Name' ,
+  PRIMARY KEY (`group_id`),
+  CONSTRAINT `FK_VENDOR_PRODUCT_ATTRIBUTE_GROUP_ENTITY_ID_VENDOR_ENTITY_ID` FOREIGN KEY (`entity_id`) REFERENCES `vendor_product_attribute_group` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) COMMENT='vendor_product_attribute_group' ENGINE=INNODB charset=utf8 COLLATE=utf8_general_ci";i:1;s:954:"#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(644): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '1.0.9', '1.1.0')
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('1.0.9', '1.1.0')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(428): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App->_initModules()
+#6 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#7 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:91:"/magento/index.php/admin/vendorproduct_set/edit/id/23/key/145eb86301eaf605cbc9102a24d1df5e/";s:11:"script_name";s:18:"/magento/index.php";s:4:"skin";s:7:"default";}

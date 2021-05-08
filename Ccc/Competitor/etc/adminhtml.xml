@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <competitor>
+            <title>Competitor</title>
+            <children>
+                <competitor>
+                    <title>Manage Competitor</title>
+                    <action>*/competitor</action>
+                </competitor>
+                <competitor_attribute>
+                    <title>Manage Attribute</title>
+                    <action>*/competitor_attribute</action>
+                </competitor_attribute>
+                <competitor_set>
+                    <title>Manage Attribute Set</title>
+                    <action>*/competitor_set</action>
+                </competitor_set>
+            </children>
+        </competitor>
+    </menu>
+    <acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+				<children>
+					<competitor translate="title">
+						<title>Competitor</title>
+						<sort_order>1000</sort_order>
+						<children>
+							<alert translate="title">
+								<title>Manage Competitor</title>
+							</alert>
+
+							<alert translate="title">
+								<title>Manage Attribute</title>
+							</alert>
+
+							<alert translate="title">
+								<title>Manage Attribute set</title>
+							</alert>
+							
+						</children>
+					</competitor>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

@@ -62,12 +62,12 @@ class Ccc_Competitor_Block_Adminhtml_Competitor_Attribute_Set_Main extends Mage_
                 'class'     => 'save'
         )));
 
-        $deleteConfirmMessage = $this->jsQuoteEscape(Mage::helper('custom')
+        $deleteConfirmMessage = $this->jsQuoteEscape(Mage::helper('competitor')
             ->__('All products of this set will be deleted! Are you sure you want to delete this attribute set?'));
         $deleteUrl = $this->getUrl('*/*/delete', array('id' => $setId));
         $this->setChild('delete_button',
             $this->getLayout()->createBlock('adminhtml/widget_button')->setData(array(
-                'label'     => Mage::helper('custom')->__('Delete Attribute Set'),
+                'label'     => Mage::helper('competitor')->__('Delete Attribute Set'),
                 'onclick'   => 'deleteConfirm(\'' . $deleteConfirmMessage . '\', \'' . $deleteUrl . '\')',
                 'class'     => 'delete'
         )));

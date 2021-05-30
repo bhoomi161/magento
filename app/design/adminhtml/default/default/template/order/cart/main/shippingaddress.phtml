@@ -1,0 +1,82 @@
+<?php $shippingAddress = $this->getShippingAddress();?>
+
+<form id="shippingAddressForm" method="post"
+    action="<?php echo $this->getUrl('order/adminhtml_order_cart/saveShippingAddress',['id'=>$this->getRequest()->getParam('id')]); ?>">
+    <?php echo $this->getBlockHtml('formkey'); ?>
+    <div id="order-shipping_address" class="box-right">
+        <div class="entry-edit" style="position: relative;">
+            <div class="entry-edit-head">
+                <h4 class="icon-head fieldset-legend head-shipping-address">Shipping Address</h4>
+                <button type="submit" name="button" style="float: right;">Save</button>    
+            </div>
+            <fieldset class="np">
+                <div class="order-save-in-address-book">
+                    <input name="sameAsBilling" type="checkbox" onclick="hideAddress();" id="sameasbilling">
+                    <label>Same As Billing Address</label>
+
+                    <input name="saveShippingAddress" type="checkbox">
+                    <label>Save in address book</label>
+                </div>
+                <div id="shippingaddress" style="display:block">
+                <div class="order-address" id="order-shipping_address_fields">
+                    <div class="content">
+                        <div class="hor-scroll">
+                            <table cellspacing="0" class="form-list">
+                                <tbody>
+                                    <tr>
+                                        <td class="label"><label>Street<span class="required">*</span></label></td>
+                                        <td class="value">
+                                            <div><input name="shipping[street]" value="<?php echo $shippingAddress['street']; ?>"
+                                                     type="text"  class=" required-entry input-text required-entry">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label"><label>Zip Code<span class="required">*</span></label></td>
+                                        <td class="value">
+                                            <input name="shipping[postcode]"
+                                                value="<?php echo $shippingAddress['postcode']; ?>" type="number" class=" input-text required-entry">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label"><label>State <span class="required">*</span></label></td>
+                                        <td class="value">
+                                            <input name="shipping[region]" value="<?php echo $shippingAddress['region']; ?>" type="text" class=" input-text required-entry">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label"><label>City <span class="required">*</span></label></td>
+                                        <td class="value">
+                                            <input name="shipping[city]" value="<?php echo $shippingAddress['city']; ?>" type="text" class=" input-text required-entry">
+                                        </td>
+                                    </tr>
+                                   
+                                    <tr>
+                                        <td class="label"><label>Country<span class="required">*</span></label>
+                                        </td>
+                                        <td class="value">
+                                            <input name="shipping[country_id]"
+                                                value="<?php echo $shippingAddress['country_id']; ?>" type="text" class=" input-text required-entry">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript">
+function hideAddress(){
+    // $id = document.getElementById('sameasbilling').checked;
+    // if($id == true){
+    //     document.getElementById('shippingaddress').style.display ="none";
+    // }else{
+    //     document.getElementById('shippingaddress').style.display ="block";
+    // }
+}
+</script>

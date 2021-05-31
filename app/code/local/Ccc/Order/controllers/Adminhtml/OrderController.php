@@ -105,7 +105,7 @@ class Ccc_Order_Adminhtml_OrderController extends Mage_Adminhtml_Controller_Acti
 
     protected function _getOrder(){
         try{
-            $orderId = $this->getRequest()->getParam('id');
+            $orderId = $this->getRequest()->getParam('order_id');
             if(!$orderId){
                 throw new Exception('Id not found');
             }

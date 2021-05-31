@@ -43,12 +43,31 @@ class Ccc_Order_Block_Adminhtml_Order_Grid extends Mage_Adminhtml_Block_Widget_G
             'type'  => 'datetime',
             'index' =>'created_at'
         ));
+ $this->addColumn('action',
+            array(
+                'header'    => Mage::helper('sales')->__('Action'),
+                'width'     => '50px',
+                'type'      => 'action',
+                'getter'     => 'getId',
+                'actions'   => array(
+                    array(
+                        'caption' => Mage::helper('sales')->__('View'),
+                        'url'     => array('base'=>'*/adminhtml_order/showorder'),
+                        'field'   => 'order_id',
+                        'data-column' => 'action',
+                    )
+                ),
+                'filter'    => false,
+                'sortable'  => false,
+                'index'     => 'stores',
+                'is_system' => true,
+        ));
        
         return parent::_prepareColumns();
         
     }
-    public function getRowUrl($row)
-    {
-        return $this->getUrl('*/*/showOrder', array('id'=>$row->getId()));
-    }
+  // public function getRowUrl($row)
+    // {
+    //     return $this->getUrl('*/*/showOrder', array('id'=>$row->getId()));
+    // }
 }
